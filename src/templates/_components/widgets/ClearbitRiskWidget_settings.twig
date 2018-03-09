@@ -1,0 +1,25 @@
+{#
+/**
+ * Clearbit Risk plugin for Craft CMS
+ *
+ * ClearbitRiskWidget Widget Settings
+ *
+ * @author    Superbig
+ * @copyright Copyright (c) 2017 Superbig
+ * @link      https://superbig.co
+ * @package   ClearbitRisk
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("superbig\\clearbitrisk\\assetbundles\\clearbitrisk\\ClearbitRiskAsset") %}
+
+{{ forms.textField({
+    label: 'Message',
+    instructions: 'Enter a message here.',
+    id: 'message',
+    name: 'message',
+    value: widget['message']})
+}}

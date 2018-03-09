@@ -1,0 +1,39 @@
+{#
+/**
+ * Clearbit Risk plugin for Craft CMS 3.x
+ *
+ * Clearbit Risk index.twig
+ *
+ * @author    Superbig
+ * @copyright Copyright (c) 2017 Superbig
+ * @link      https://superbig.co
+ * @package   ClearbitRisk
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("superbig\\clearbitrisk\\assetbundles\\clearbitrisk\\ClearbitRiskAsset") %}
+{% do view.registerAssetBundle("superbig\\clearbitrisk\\assetbundles\\indexcpsection\\IndexCPSectionAsset") %}
+
+{% set docsUrl = "https://github.com/sjelfull/clearbit-risk/blob/master/README.md" %}
+
+{% set title = "Clearbit Risk" %}
+
+{% set pluginCpUrl = url('clearbit-risk') %}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@superbig/clearbitrisk/assetbundles/indexcpsection/dist', true) ~ '/img/Index-icon.svg' %}
+
+{% set extraPageHeaderHtml %}
+    <div class="buttons">
+        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('clearbit-risk') }}</a>
+    </div>
+{% endset %}
+
+{% set content %}
+    <h2>{{ "Index CP Section body goes here"|t('clearbit-risk') }}</h2>
+    <img src="{{ iconUrl }}" height="64" width="64" />
+    <p class="textline"></p>
+{% endset %}

@@ -1,0 +1,50 @@
+{
+    "name": "superbig/craft-clearbitrisk",
+    "description": "Detect bad actors, identify disposable email addresses, stop spam signups",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "clearbit risk"
+    ],
+    "support": {
+        "docs": "https://github.com/sjelfull/craft-clearbitrisk/blob/master/README.md",
+        "issues": "https://github.com/sjelfull/craft-clearbitrisk/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Superbig",
+            "homepage": "https://superbig.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "superbig\\clearbitrisk\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Clearbit Risk",
+        "handle": "clearbit-risk",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": true,
+        "hasCpSection": true,
+        "changelogUrl": "https://raw.githubusercontent.com/sjelfull/craft-clearbitrisk/master/CHANGELOG.md",
+        "components": {
+            "clearbitRiskService": "superbig\\clearbitrisk\\services\\ClearbitRiskService"
+        },
+        "class": "superbig\\clearbitrisk\\ClearbitRisk"
+    }
+}
